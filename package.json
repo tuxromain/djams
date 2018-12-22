@@ -1,0 +1,28 @@
+{
+  "name": "djams",
+  "version": "0.0.0",
+  "description": "app to handle jam sessions",
+  "main": "server.js",
+  "scripts": {
+    "devserver": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuxromain/djams.git"
+  },
+  "author": "Tuxromain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tuxromain/djams/issues"
+  },
+  "homepage": "https://github.com/tuxromain/djams#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
