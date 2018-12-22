@@ -6,9 +6,7 @@ const StylesSchema = new Schema({
         type: String,
         required: true
     },
-    decade: {
-        type: Number
-    }
+    decade: Number
 })
 
 module.exports = Styles = mongoose.model('Styles', StylesSchema);
