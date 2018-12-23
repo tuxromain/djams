@@ -25,5 +25,7 @@ app.use('/api/instruments', instruments);
 app.use('/api/styles', styles);
 
 //LAUNCH APP
-const port = process.env.PORT || 4000;
-app.listen(port, () => { console.log(`App is running on port ${port}`) });
+const port = process.env.PORT;
+if(port == null || port == "")
+    port = 3000;
+app.listen(port);

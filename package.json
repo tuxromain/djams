@@ -2,9 +2,10 @@
   "name": "djams",
   "version": "0.0.0",
   "description": "app to handle jam sessions",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "devserver": "nodemon server.js"
+    "devserver": "nodemon index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
