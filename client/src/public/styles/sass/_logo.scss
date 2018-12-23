@@ -1,6 +1,6 @@
 .app-logo{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     position: relative;
     .app-logo__circle-outside{
@@ -14,8 +14,8 @@
         left: 0;
     }
     .app-logo__circle-inside{
-        width: 80px;
-        height: 80px;
+        width: 68px;
+        height: 68px;
         border-radius: 50%;
         background-image: linear-gradient(to right top, #ff6f91, #ff7887, #ff817e, #ff8c76, #ff9671);
         opacity: 0.8;
@@ -29,7 +29,7 @@
         font-family: $monoton, sans-serif;
         color: $black;
         .app-logo__text{
-            transform: rotate(-10deg) translateY(-4px) translateX(-4px);
+            transform: rotate(-10deg) translateY(-4px) translateX(-6px);
         }
     }
 }

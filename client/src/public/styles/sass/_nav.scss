@@ -7,34 +7,131 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media only screen and (max-width: 1024px){
+            width: 50vw;
+            height: 100%;
+            justify-content: flex-start;
+            padding-left: 50px;
+        }
     }
-    .nav-content__links-container{
+    .nav-content--laptop{
+        display: bloc;
         width: 100%;
         height: auto;
-        margin-top: 100px;
-        .navlink{
+        .nav-content__links-container{
             width: 100%;
-            height: 50px;
-            font-size: 1.6rem;
-            opacity: 0.3;
-            text-decoration: none;
-            color: $black;
-            padding-left: 40px;
-            display: flex;
-            align-items: center;
-            transition: all ease .1s;
-            &:hover{
-                // background-image: linear-gradient(to right top, #ff6f91, #ff7887, #ff817e, #ff8c76, #ff9671);
-                color: $black;
-                opacity: 1;
-            }
+            height: auto;
+            margin-top: 100px;
         }
-        .navlink--active{
-            color: $black;
-            opacity: 1;
-            -webkit-box-shadow:inset 5px 0px 0px $pink;
-            -moz-box-shadow:inset 5px 0px 0px $pink;
-            box-shadow:inset 5px 0px 0px $pink;
+        @media only screen and (max-width: 1024px){
+            display: none;
         }
     }
+    .nav-content--mobile{
+        width: 50vw;
+        height: 100%;
+        display: none;
+        justify-content: flex-end;
+        .menu-burger{
+            margin-right: 50px;
+            width: 40px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            span{
+                width: 100%;
+                height: 6px;
+                background-color: $black;
+                position: relative;
+                border-radius: 3px;
+                &::before, &::after{
+                    content: "";
+                    width: 100%;
+                    height: 6px;
+                    background-color: $black;
+                    border-radius: 3px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: all ease .2s;
+                }
+                &::before{
+                    transform: translateY(-10px);
+                }
+                &::after{
+                    transform: translateY(10px);
+                }
+            }
+            &:hover{
+                span{
+                    &::before{
+                        width: 80%
+                    }
+                    &::after{
+                        width: 50%;
+                    }
+                }
+            }
+        }
+        @media only screen and (max-width: 1024px){
+            display: flex;
+        }
+    }
+    @media only screen and (max-width: 1024px){
+        display: flex;
+    }
+}
+.nav-mobile-content{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: $black;
+    color: $gray;
+    z-index: 9;
+    transition: all ease .4s;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.nav-mobile-content.show{
+    top: 0;
+}
+.close-mobile-menu{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+}
+.navlink{
+    width: 100%;
+    height: 60px;
+    font-size: 1.6rem;
+    opacity: 0.2;
+    text-decoration: none;
+    color: $black;
+    padding-left: 40px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    transition: all ease .1s;
+    letter-spacing: 1px;
+    &:hover{
+        color: $black;
+        opacity: 1;
+    }
+}
+.navlink--active{
+    color: $black;
+    opacity: 1;
+    -webkit-box-shadow:inset 7px 0px 0px $pink;
+    -moz-box-shadow:inset 7px 0px 0px $pink;
+    box-shadow:inset 7px 0px 0px $pink;
+}
+.navlink-white{
+    color: $gray !important;
 }
