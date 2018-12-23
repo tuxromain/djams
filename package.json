@@ -4,7 +4,7 @@
   "description": "app to handle jam sessions",
   "main": "index.js",
   "scripts": {
-    "devserver": "nodemon index.js",
+    "devserver": "concurrently 'nodemon index.js' 'cp client/src/index.html dist/ && webpack-dev-server --config ./webpack.config.js --mode development' 'compass watch'",
     "start": "node index.js"
   },
   "repository": {
@@ -24,9 +24,20 @@
     "express": "^4.16.4",
     "fs": "0.0.1-security",
     "mongoose": "^5.4.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.9",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.13"
   }
 }

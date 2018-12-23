@@ -27,7 +27,7 @@ app.use('/b1xve8u1N5CLPs7A0yTkK5W4/api/instruments', instruments);
 app.use('/b1xve8u1N5CLPs7A0yTkK5W4/api/styles', styles);
 
 //SET CLIENT
-app.use(express.static(__dirname + '/client'));
+app.use(express.static(__dirname + '/client/src'));
 app.get('/', (req,res) => {
     res.render('', (err, data) => {
         if(err){
