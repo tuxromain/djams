@@ -24,6 +24,10 @@ mongoose.connect(db)
 app.use('/api/instruments', instruments);
 app.use('/api/styles', styles);
 
+app.get('/', (req,res) => {
+    res.render('client/index');
+})
+
 //LAUNCH APP
 const port = process.env.PORT;
 if(port == null || port == "")
