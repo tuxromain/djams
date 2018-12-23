@@ -1,12 +1,13 @@
-const SRC_DIR = __dirname+'/client/src/app/';
-const DIST_DIR = __dirname+'/dist/';
+const path = require('path');
+
+const APP_DIR = path.resolve(__dirname, 'client/src/app');
+const BUILD_DIR = path.resolve(__dirname, 'dist/public/js');
 
 const conf = {
-    entry: SRC_DIR+'index.js',
+    entry:APP_DIR+'/index.js',
     output: {
-        path: DIST_DIR,
-        filename: "djams.bundle.js",
-        publicPath: '/'
+        path: BUILD_DIR,
+        filename: "bundle.js"
     },
     module: {
         rules: [
@@ -14,6 +15,10 @@ const conf = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
+            },
+            {
+                test: /\.css$/,
+                use:['style-loader','css-loader']
             }
         ]
     },

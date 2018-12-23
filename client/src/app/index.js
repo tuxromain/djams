@@ -1,8 +1,22 @@
 import React from "react";
 import reactDOM from "react-dom";
 
+import { Router, Switch } from "react-router-dom";
+import routes from "./routes";
+import history from "./history";
+
+import "../public/styles/css/main.css";
+
+
+import App from "./App.jsx";
 
 reactDOM.render(
-    <p>HELLO WORLD !</p>,
+    <Router history={history}>
+        <App>
+            <Switch>
+                {routes}
+            </Switch>
+        </App>
+    </Router>,
     document.getElementById('app')
 )

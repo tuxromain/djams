@@ -1,0 +1,26 @@
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 8vh 1fr;
+    grid-template-columns: 16vw 1fr;
+    grid-template-areas: 'nav workbar'
+                         'nav content';
+    @media only screen and (max-width: 1024px){
+        grid-template-rows: 16vh 1fr 8vh;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'nav '
+                            'content'
+                            'workbar';
+    }
+}
+.nav-container{
+    grid-area: nav;
+}
+.workbar-container{
+    grid-area: workbar;
+}
+.app-content{
+    grid-area: content;
+    background-color: rgb(227, 233, 240);
+}
