@@ -4,7 +4,7 @@ class CreateJam extends React.Component{
     render(){
         return(
             <div className="createjam">
-                <h2>Create a Jam</h2>
+                <h2>Create a new jam session !</h2>
             </div>
         )
     }
