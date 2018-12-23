@@ -27,9 +27,9 @@ app.use('/b1xve8u1N5CLPs7A0yTkK5W4/api/instruments', instruments);
 app.use('/b1xve8u1N5CLPs7A0yTkK5W4/api/styles', styles);
 
 //SET CLIENT
-app.use(express.static(__dirname + '/client/src'));
+app.use(express.static(__dirname + '/dist'));
 app.get('/', (req,res) => {
-    res.render('', (err, data) => {
+    res.render('index', (err, data) => {
         if(err){
             res.status(404).write('File not found !');
         }else{
