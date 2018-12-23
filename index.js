@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const fs = require('fs');
+
 const instruments = require('./routes/api/instruments');
 const styles = require('./routes/api/styles');
 
@@ -21,15 +23,23 @@ mongoose.connect(db)
     .catch(err => { console.log(`FAILURE : Something wrong happened, can't connect to djams database. Error : ${err}`) });
 
 //USE ROUTES
-app.use('/api/instruments', instruments);
-app.use('/api/styles', styles);
+app.use('/b1xve8u1N5CLPs7A0yTkK5W4/api/instruments', instruments);
+app.use('/b1xve8u1N5CLPs7A0yTkK5W4/api/styles', styles);
 
+//SET CLIENT
+app.use(express.static(__dirname + '/client'));
 app.get('/', (req,res) => {
-    res.render('client/index');
+    res.render('', (err, data) => {
+        if(err){
+            res.status(404).write('File not found !');
+        }else{
+            res.send(data);
+        }
+    });
 })
 
 //LAUNCH APP
-const port = process.env.PORT;
+let port = process.env.PORT;
 if(port == null || port == "")
-    port = 3000;
+    port = 4000;
 app.listen(port);
