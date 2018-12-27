@@ -2,9 +2,9 @@
   "name": "djams",
   "version": "0.0.0",
   "description": "app to handle jam sessions",
-  "main": "server/index.js",
+  "main": "index.js",
   "scripts": {
-    "devserver": "cp client/src/index.ejs dist/ && concurrently 'webpack-dev-server --config ./webpack.config.js --mode development' 'compass watch' 'nodemon server/index.js'",
+    "devserver": "cp client/src/index.ejs dist/ && concurrently 'webpack-dev-server --config ./webpack.config.js --mode development' 'compass watch' 'nodemon index.js'",
     "build": "cp client/src/index.ejs dist/ && webpack --config ./webpack.config.js --mode production",
     "start": "node index.js"
   },

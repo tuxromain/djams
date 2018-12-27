@@ -2,8 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const fs = require('fs');
-const ejs = require('ejs');
 
 const instruments = require('./routes/api/instruments');
 const styles = require('./routes/api/styles');
