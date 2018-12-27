@@ -5,7 +5,7 @@ import { Router, Switch } from "react-router-dom";
 import routes from "./routes";
 import history from "./history";
 
-import App from "./App.jsx";
+import App from "./App";
 
 reactDOM.render(
     <Router history={history}>
