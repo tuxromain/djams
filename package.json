@@ -4,8 +4,8 @@
   "description": "app to handle jam sessions",
   "main": "index.js",
   "scripts": {
-    "devserver": "cp client/src/index.html dist/ && concurrently 'webpack-dev-server --config ./webpack.config.js --mode development' 'compass watch' 'nodemon index.js'",
-    "build": "cp client/src/index.html dist/ && webpack --config ./webpack.config.js --mode production",
+    "devserver": "cp client/src/index.ejs dist/ && concurrently 'webpack-dev-server --config ./webpack.config.js --mode development' 'compass watch' 'nodemon index.js'",
+    "build": "cp client/src/index.ejs dist/ && webpack --config ./webpack.config.js --mode production",
     "start": "node index.js"
   },
   "repository": {

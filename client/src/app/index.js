@@ -5,9 +5,6 @@ import { Router, Switch } from "react-router-dom";
 import routes from "./routes";
 import history from "./history";
 
-import "../public/styles/css/main.css";
-
-
 import App from "./App.jsx";
 
 reactDOM.render(
